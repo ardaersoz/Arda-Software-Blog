@@ -1,0 +1,326 @@
+/* CSS Reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Genel Stil */
+body {
+    font-family: "Lora", serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    background-color: #2d2d2d;
+    color: #eaeaea;
+}
+
+/* Logo Stil */
+.logo img {
+    height: 210px; /* Logonun yüksekliği artırıldı */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* İçerik Opaklığı */
+.content {
+    position: relative;
+    z-index: 2;
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1110px;
+    margin: 20px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Header */
+header {
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 2px solid #7d7d7d;
+    font-size: 1.3rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.menu {
+    font-family: "Baskervville SC", serif;
+    list-style: none;
+    display: flex; /* Menü öğelerinin yatay sıralanması için */
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-left: 30px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu li a:hover {
+    color: #c0c0c0;
+}
+
+/* Header animasyonları */
+.menu li a {
+    position: relative;
+    overflow: hidden;
+}
+
+.menu li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #c0c0c0;
+    transition: width 0.3s ease;
+}
+
+.menu li a:hover::before {
+    width: 100%;
+}
+
+/* Bölüm Animasyonları */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Section */
+.hero {
+    position: relative; /* Ensure the pseudo-element is positioned relative to this element */
+    text-align: center;
+    color: #fff;
+    padding: 150px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+    overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+}
+
+/* Pseudo-element for blurred background */
+.hero::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('photos/timo-wagner-fT6-YkB0nfg-unsplash.jpg') no-repeat center center;
+    background-size: cover;
+    filter: blur(4px); /* Adjust the blur value as needed */
+    z-index: -1; /* Position the pseudo-element behind the text */
+    transform: scale(1.1); /* Slightly scale to ensure no gaps due to blur */
+}
+
+.hero-content {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.5); /*Yarı şeffaf arkaplan yapmak için ki yazılar daha net okunsun*/
+    padding: 20px; /*iç boşluk */
+    border-radius: 8px;
+}
+
+.hero h1 {
+    color: #fff;
+    margin: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.hero p {
+    color: #fff;
+    margin: 0;
+}
+
+.hero .hero-content h1 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.hero .hero-content p {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Sayfa açılış animasyonu */
+.hero {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Diğer bölümler */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Bölüm animasyonları */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Bölümler */
+section {
+    margin: 20px 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: #c0c0c0;
+    margin-bottom: 20px;
+}
+
+section p, section ul {
+    font-size: 1.2rem;
+}
+
+/* Projeler ve Deneyimler */
+.project, .experience {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.project h3, .experience h3 {
+    font-size: 1.8rem;
+    color: #eaeaea;
+}
+
+.project p, .experience p {
+    font-size: 1.2rem;
+}
+
+/* Proje Linki Stilleri */
+.project1 a, .project2 a {
+    display: inline-block; /* Bağlantıyı bir blok olarak gösterir, padding ve margin uygulamak için */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    color: #f0f0f0; /* Bağlantı rengi (örneğin, yeşil) */
+    font-weight: bold; /* Kalın font stili */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Geçiş efekti */
+    padding: 10px 15px; /* İç boşluk */
+    border: 2px solid #4b4b4d; /* Kenarlık */
+    border-radius: 5px; /* Kenar köşe yuvarlatma */
+}
+
+.project1 a:hover, .project2 a:hover {
+    color: #fff; /* Üzerine gelindiğinde renk */
+    background-color: #63c6df; /* Üzerine gelindiğinde arka plan rengi */
+    border-color: #2a6f7b; /* Üzerine gelindiğinde kenarlık rengi */
+}
+
+/* Duyurular */
+.duyurular-list p {
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#loadMore {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#loadMore:hover {
+    background-color: #555;
+}
+
+.btn {
+    display: inline-block; /* Bağlantıyı bir blok olarak gösterir, padding ve margin uygulamak için */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    color: #ffffff; /* Bağlantı rengi (örneğin, yeşil) */
+    font-weight: bold; /* Kalın font stili */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Geçiş efekti */
+    padding: 10px 15px; /* İç boşluk */
+    border: 2px solid #d1d1e3; /* Kenarlık */
+    border-radius: 5px; /* Kenar köşe yuvarlatma */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn:hover {
+    color: #000000; /* Üzerine gelindiğinde renk */
+    background-color: #757575; /* Üzerine gelindiğinde arka plan rengi */
+    border-color: #000000; /* Üzerine gelindiğinde kenarlık rengi */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #c0c0c0;
+    margin-top: 20px;
+    font-size: 1rem;
+    border-top: 2px solid #444;
+}
+
+/* Kaydırma Çubuğu Stili */
+::-webkit-scrollbar {
+    width: 12px; /* Kaydırma çubuğunun genişliği */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444; /* Kaydırma çubuğunun rengi */
+    border-radius: 6px; /* Kenar köşe yuvarlatma */
+    border: 2px solid #000; /* Kenarlık */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Kaydırma çubuğunun üzerine gelindiğinde rengi */
+}
+
+::-webkit-scrollbar-track {
+    background: #222; /* Kaydırma çubuğunun arka planı */
+    border-radius: 6px; /* Kenar köşe yuvarlatma */
+    border: 2px solid #000; /* Kenarlık */
+}

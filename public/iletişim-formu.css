@@ -1,0 +1,184 @@
+/* CSS Reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Genel Stil */
+body {
+    font-family: "Lora", serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    background-color: #2d2d2d;
+    color: #eaeaea;
+}
+
+/* Logo Stil */
+.logo img {
+    height: 210px; /* Logonun yüksekliği artırıldı */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* İçerik Opaklığı */
+.content {
+    position: relative;
+    z-index: 2;
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1110px;
+    margin: 20px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Header */
+header {
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 2px solid #7d7d7d;
+    font-size: 1.2rem;
+    font-family: "Baskervville SC", serif;
+} 
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.menu {
+    font-family: "Baskervville SC", serif;
+    list-style: none;
+    display: flex; /* Menü öğelerinin yatay sıralanması için */
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-left: 25px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu li a:hover {
+    color: #c0c0c0;
+}
+
+/* Header animasyonları */
+.menu li a {
+    position: relative;
+    overflow: hidden;
+}
+
+.menu li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #c0c0c0;
+    transition: width 0.3s ease;
+}
+
+.menu li a:hover::before {
+    width: 100%;
+}
+
+section h2 {
+    margin-left: 45%;
+    margin-right: 50%;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2.3em;
+}   
+
+section p {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.4em;
+    max-width: 600px;
+    margin-left: 730px;
+}
+
+
+/* İletişim Formu */
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 120px;
+    padding-top: 70px;
+    background-color: #000;
+    margin-top: -90px;
+    background: linear-gradient(to top, #000 0%, #2d2d2d 100%);
+}
+
+form label {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #333;
+    color: #fff;
+}
+
+form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+form button {
+    padding: 15px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Kaydırma Çubuğu Stili */
+::-webkit-scrollbar {
+    width: 12px; /* Kaydırma çubuğunun genişliği */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444; /* Kaydırma çubuğunun rengi */
+    border-radius: 6px; /* Kenar köşe yuvarlatma */
+    border: 2px solid #000; /* Kenarlık */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Kaydırma çubuğunun üzerine gelindiğinde rengi */
+}
+
+::-webkit-scrollbar-track {
+    background: #222; /* Kaydırma çubuğunun arka planı */
+    border-radius: 6px; /* Kenar köşe yuvarlatma */
+    border: 2px solid #000; /* Kenarlık */
+}

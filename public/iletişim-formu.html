@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim Formu</title>
+    <link rel="stylesheet" href="iletişim-formu.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="photos/ArdaImza.png" alt="Arda Ersöz Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="index.html">Hakkımda</a></li>
+                <li><a href="index.html">Bildiklerim</a></li>
+                <li><a href="index.html">Projelerim</a></li>
+                <li><a href="index.html">Deneyimlerim</a></li>
+                <li><a href="index.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section id="contact" class="section">
+    <h2>İletişim</h2>
+    <p>Bana ulaşmak için aşağıdaki formu doldurun!</p>
+    <a href=""></a>
+    <form id="myForm">
+        <label for="name">Adınız:</label>
+        <input type="text" id="name" name="from_name" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="from_email" required>
+    
+        <label for="message">Mesajınız:</label>
+        <textarea id="message" name="message" required></textarea>
+    
+        <button type="submit">Gönder</button>
+    </form>
+     
+</section>
+
+<script src="email.js"></script>
+</body>
+</html>

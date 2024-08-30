@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duyuru Formu</title>
+    <link rel="stylesheet" href="duyuru-formu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="photos/ArdaImza.png" alt="Arda Ersöz Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#about">Hakkımda</a></li>
+                <li><a href="#skills">Bildiklerim</a></li>
+                <li><a href="#projects">Projelerim</a></li>
+                <li><a href="#experience">Deneyimlerim</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<h2>Duyuru Ekle</h2>
+    <form id="announcementForm">
+        <label for="subject">Konu:</label>
+        <select id="subject" name="subject" required>
+            <option value="">Konu Seçin</option>
+            <option value="Güncelleme">Güncelleme</option>
+            <option value="Proje">Proje</option>
+            <option value="Sıfırdan iş">Sıfırdan iş</option>
+            <option value="Revizyon">Revizyon</option>
+            <option value="Bilgi">Bilgi</option>
+        </select>
+
+        <br><br>
+
+        <label for="content">İçerik:</label>
+        <textarea id="content" name="content" rows="4" cols="50" placeholder="İçeriği buraya yazın..." required></textarea>
+
+        <br><br>
+
+        <button type="submit">Gönder</button>
+    </form>
+
+ <script src="duyuru.js"></script>
+</body>
+</html>
