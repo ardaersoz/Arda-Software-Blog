@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.8;
-    background-color: #2d2d2d;
+    background-color: #1d1d1d;
     color: #eaeaea;
 }
 
@@ -31,7 +31,7 @@ body {
     border-radius: 10px;
     max-width: 1110px;
     margin: 20px auto;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
 }
 
 /* Header */
@@ -46,13 +46,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .menu {
-    font-family: "Baskervville SC", serif;
+    font-family: "Dancing Script", cursive;
     list-style: none;
     display: flex; /* Menü öğelerinin yatay sıralanması için */
     margin: 0;
@@ -61,6 +61,7 @@ nav {
 
 .menu li {
     margin-left: 30px;
+    font-size: 1.6rem;
 }
 
 .menu li a {
@@ -128,9 +129,9 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('photos/timo-wagner-fT6-YkB0nfg-unsplash.jpg') no-repeat center center;
+    background: url('photos/70dc956e8e4520dfebdd23eb41841d22.jpg') no-repeat center center;
     background-size: cover;
-    filter: blur(4px); /* Adjust the blur value as needed */
+    filter: blur(6px); /* Adjust the blur value as needed */
     z-index: -1; /* Position the pseudo-element behind the text */
     transform: scale(1.1); /* Slightly scale to ensure no gaps due to blur */
 }
@@ -139,7 +140,7 @@ nav {
     display: inline-block;
     background: rgba(0, 0, 0, 0.5); /*Yarı şeffaf arkaplan yapmak için ki yazılar daha net okunsun*/
     padding: 20px; /*iç boşluk */
-    border-radius: 8px;
+    border-radius: 30px;
 }
 
 .hero h1 {
@@ -257,6 +258,11 @@ section p, section ul {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 10px;
     border-radius: 8px;
+}
+
+.duyurular-list li p a {
+    color: #6898eb;
+    font-style: italic;
 }
 
 #loadMore {

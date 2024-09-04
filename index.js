@@ -47,31 +47,4 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     }, 100); // Sayfa yüklendikten sonra 100ms bekleyin
-
-    // Duyuruları al ve göster
-    const fetchAndDisplayAnnouncements = () => {
-        fetch('http://localhost:3000/api/announcements')
-            .then(response => response.json())
-            .then(data => {
-                const announcementsContainer = document.querySelector('.duyurular-list');
-                announcementsContainer.innerHTML = ''; // Önceki duyuruları temizle
-
-                data.forEach(announcement => {
-                    const announcementElement = document.createElement('div');
-                    announcementElement.innerHTML = `<h3>${announcement.subject}</h3><p>${announcement.content}</p>`;
-                    announcementsContainer.appendChild(announcementElement);
-                });
-
-                // Eğer duyuruların sayısı belli bir değerden fazlaysa, "Devamı Burada" butonunu göster
-                if (data.length > 5) {
-                    document.getElementById('loadMore').style.display = 'block';
-                }
-            })
-            .catch(error => {
-                console.error('Duyurular alınırken hata oluştu:', error);
-            });
-    };
-
-    // Sayfa yüklendiğinde duyuruları al ve göster
-    fetchAndDisplayAnnouncements();
 });
